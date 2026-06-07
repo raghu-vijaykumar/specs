@@ -125,7 +125,7 @@ Request platform permissions (camera, location, notifications, photo library, et
 App metadata — version, credits, support, and links.
 
 ### Layout
-- List layout (`specs/lists/spec.md` — grouped list style)
+- List layout (`specs/mobile/lists/spec.md` — grouped list style)
 - `{color.surface}` container with `{radius.md}`
 - Center-aligned header: app icon (80px), app name (`{type.h2}`), tagline (`{type.bodySm}`)
 

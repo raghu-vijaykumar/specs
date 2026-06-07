@@ -9,7 +9,7 @@ A reusable, tech-agnostic UI component spec system. Defines what to build, not h
 Components grouped by UI pattern (cards, inputs, navigation), not by screen (login, settings). Any app composes patterns as needed.
 
 ### 2. Token-First
-All values reference design tokens `{token.name}`. The single source of truth is `specs/tokens.md`. Change one file → everything updates.
+All values reference design tokens `{token.name}`. The single source of truth is `specs/general/tokens.md`. Change one file → everything updates.
 
 ### 3. Three-Mode System — System, Light, Dark
 Every color and shadow token has a **Light** and **Dark** value. The **System** mode follows the device setting and picks the right column automatically. Components never hardcode a color — they reference `{color.*}` and the active mode resolves it.
@@ -21,7 +21,7 @@ Every color and shadow token has a **Light** and **Dark** value. The **System** 
 | Dark | Forces dark palette. |
 
 ### 4. Custom Visual Identity
-- No generic icon fonts. Icons are hand-crafted (described in `specs/icons/spec.md`, refined one-by-one).
+- No generic icon fonts. Icons are hand-crafted (described in `specs/mobile/icons/spec.md`, refined one-by-one).
 - Rounded corners, soft shadows, generous whitespace.
 - Warm, muted color palette.
 

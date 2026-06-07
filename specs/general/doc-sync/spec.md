@@ -217,7 +217,7 @@ When writing or modifying code, you MUST:
 
 1. **Write doc comments** for every new public class, method, field, or function.
    Use the correct format for the language (JavaDocs, DartDoc, JSDoc, etc.).
-   See specs/doc-sync/spec.md for templates.
+   See specs/general/doc-sync/spec.md for templates.
 
 2. **Update existing docs** when you change a public API signature or behavior.
    Never leave a doc comment that contradicts the code.

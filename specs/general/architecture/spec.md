@@ -15,7 +15,7 @@ lib/
     app.dart                       # MaterialApp widget, theme, router
     router.dart                    # Navigation graph (GoRouter or similar)
     theme/
-      tokens.dart                  # Generated from specs/tokens.md
+      tokens.dart                  # Generated from specs/general/tokens.md
       app_theme.dart               # ThemeExtension, light/dark constructors
   features/                        # One folder per feature/screen
     auth/
@@ -260,9 +260,9 @@ Every screen follows the same state machine.
           └──────────┘
 ```
 
-- **Loading**: skeleton loader (`specs/feedback`)
-- **Empty**: empty state (`specs/feedback`)
-- **Error**: error state with retry (`specs/feedback`)
+- **Loading**: skeleton loader (`specs/mobile/feedback`)
+- **Empty**: empty state (`specs/mobile/feedback`)
+- **Error**: error state with retry (`specs/mobile/feedback`)
 - **Success**: the actual content
 - **Refresh**: existing content stays visible, loading indicator at top
 
@@ -329,12 +329,12 @@ Option to "Restart" (rebuild app state)
 
 ## 6. Build Pipeline
 
-How tokens flow from `specs/tokens.md` into generated Dart code.
+How tokens flow from `specs/general/tokens.md` into generated Dart code.
 
 ### Token Generation
 
 ```
-specs/tokens.md
+specs/general/tokens.md
       │
       │ (manual or code-gen script)
       ↓
