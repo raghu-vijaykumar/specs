@@ -7,7 +7,9 @@ Framework-agnostic design and architecture specs — reusable as a starting poin
 ```
 .specify/constitution.md   — Design principles & governance rules
 skills/
-└── code-review/           — Multi-aspect code review skill (8 parallel subagents)
+├── code-review/           — Multi-aspect code review skill (8 parallel subagents)
+├── draw-io/               — Diagram creation: layout, colors, connectors, 7 template types, validation
+└── manim/                 — Animation creation: 7 scene templates, pacing, styling, validation
 specs/
 ├── mobile/                — Mobile UI component specs
 │   ├── bottom_sheets/     — Standard, modal, expandable, floating action row
