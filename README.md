@@ -24,6 +24,7 @@ specs/
 │   ├── media/             — Image viewer, gallery grid, video player
 │   ├── navigation/        — Bottom nav, top tabs, floating indicator/icons
 │   ├── pickers/           — Date picker, time picker, bottom sheet picker
+│   ├── schema-upgrades/   — In-app DB migrations: versioning, skip handling, failure recovery, testing
 │   ├── stepper/           — Numbered, dot (compact), side (vertical)
 │   ├── themes/            — Design philosophy behind tokens
 │   └── typography/        — 9-level type scale, font family, text scaling
