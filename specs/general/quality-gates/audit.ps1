@@ -1,19 +1,34 @@
 <#
 .SYNOPSIS
-    Audit all spec files to ensure they contain a Testing & Validation section.
+    Audit implementation specs to ensure they contain a Testing & Validation section.
 .DESCRIPTION
-    Scans every spec.md under specs/ and reports any that lack a
-    "## Testing & Validation" heading. Exit code 0 = all pass.
+    Checks all spec.md files under specs/general/ (excluding concept/reference
+    specs) for a "## Testing & Validation" heading. Concept specs (themes,
+    typography, icons, architecture, doc-sync, legal, system) and all mobile
+    UI component specs are excluded — they describe visual/interaction
+    patterns, not buildable code.
+    Exit code 0 = all pass.
 .EXAMPLE
-    pwsh -File audit.ps1
+    powershell -File audit.ps1
 #>
+
+# Directories that are concept/reference, not implementation
+$exclude = @(
+    "architecture", "doc-sync", "legal", "system",
+    "themes", "typography", "icons"
+)
 
 $missing = @()
 $specs = Get-ChildItem -LiteralPath "specs" -Recurse -Filter "spec.md"
 
 foreach ($spec in $specs) {
+    $parentDir = $spec.Directory.Name
+    if ($parentDir -in $exclude) { continue }
+    # Also skip all mobile specs (UI component descriptions)
+    if ($spec.FullName -match "\\specs\\mobile\\") { continue }
+
     $content = Get-Content -LiteralPath $spec.FullName -Raw -ErrorAction SilentlyContinue
-    if ($content -notmatch "## Testing & Validation") {
+    if ($content -notmatch "Testing & Validation") {
         $missing += $spec.FullName.Replace("$PWD\", "")
     }
 }

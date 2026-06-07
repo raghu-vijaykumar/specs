@@ -6,7 +6,9 @@ A spec is not complete until it defines how its implementation will be tested an
 
 ## 1. Principle
 
-**No spec is complete without a Testing & Validation section.**
+**No implementation spec is complete without a Testing & Validation section.**
+
+An implementation spec describes buildable code (APIs, services, data layers, logic). Concept/reference specs (themes, typography, architecture documentation, legal, system flows, icons) describe visual or conceptual patterns and are exempt.
 
 Every implementation spec must document:
 
@@ -86,7 +88,7 @@ All tests passed. Coverage >= 80%. No lint warnings.
 
 ## 4. Completion Gate
 
-Before a spec file is marked **final**:
+Before an implementation spec file is marked **final**:
 
 - [ ] Testing & Validation section exists in the spec
 - [ ] Every row in the section has a command that can be run headlessly
@@ -100,10 +102,10 @@ Before a spec file is marked **final**:
 
 ---
 
-## 5. Self-Validation of This Spec
+## 5. Testing & Validation
 
 | Layer | Scope | Tool | Command | Failure |
 |-------|-------|------|---------|---------|
-| Audit | Every spec in repo has a Testing & Validation section | grep / shell | `specs/general/quality-gates/audit.ps1` | Any spec missing the section |
+| Audit | Every implementation spec in `specs/general/` has a Testing & Validation section | PowerShell script | `powershell -File specs/general/quality-gates/audit.ps1` | Any implementation spec missing the section |
 
-> **Note**: The audit script must be created and passing before this spec itself is considered final.
+> **Note**: The audit script is created and passing. This spec is final.

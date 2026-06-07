@@ -6,6 +6,8 @@ Framework-agnostic design and architecture specs — reusable as a starting poin
 
 ```
 .specify/constitution.md   — Design principles & governance rules
+skills/
+└── code-review/           — Multi-aspect code review skill (8 parallel subagents)
 specs/
 ├── mobile/                — Mobile UI component specs
 │   ├── bottom_sheets/     — Standard, modal, expandable, floating action row
@@ -26,7 +28,18 @@ specs/
     ├── architecture/      — Project structure, screen templates, nav map, data flow, error handling, build pipeline
     ├── doc-sync/          — Doc generation per language, source map, bidirectional sync rules, AI agent instructions
     ├── legal/             — Privacy policy, ToS, licenses, cookie consent, data export, accessibility statement
-    └── quality-gates/     — Testing & validation requirements per code type; completion gate template
+    ├── quality-gates/     — Testing & validation requirements per code type; completion gate template
+    ├── security/          — OWASP top 10, input validation, auth/z patterns, secret management, dependency audit
+    ├── pii-handling/      — PII classification, storage rules, masking, logging, retention, deletion
+    ├── api-design/        — REST conventions, URL structure, error response shape, pagination, versioning, idempotency
+    ├── data-modeling/     — Schema naming, audit fields, soft delete, migration patterns, indexing strategy
+    ├── state-management/  — Local vs global state, immutability, side effects, server-state caching rules
+    ├── observability/     — Structured logging, metrics, distributed tracing, alerting rules, PII-free telemetry
+    ├── performance/       — Budgets, bundle size, render optimization, profiling checklist, lazy-load rules
+    ├── ci-cd/             — Pipeline stages, immutable artifacts, environment promotion, rollback procedure
+    ├── migrations/        — Deprecation strategy, phased rollout template, A/B testing template, backward compat rules
+    ├── error-handling/    — Error taxonomy, typed errors, user-facing messages, offline patterns, recovery
+    └── accessibility/     — WCAG 2.1 AA, keyboard nav, screen reader patterns, contrast rules, reduced motion
     ├── system/            — Onboarding, force update, maintenance, permissions, about, splash
     └── tokens.md          — Single source of truth for all design tokens (Light + Dark columns)
 ```
