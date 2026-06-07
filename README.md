@@ -26,6 +26,7 @@ specs/
     ├── architecture/      — Project structure, screen templates, nav map, data flow, error handling, build pipeline
     ├── doc-sync/          — Doc generation per language, source map, bidirectional sync rules, AI agent instructions
     ├── legal/             — Privacy policy, ToS, licenses, cookie consent, data export, accessibility statement
+    └── quality-gates/     — Testing & validation requirements per code type; completion gate template
     ├── system/            — Onboarding, force update, maintenance, permissions, about, splash
     └── tokens.md          — Single source of truth for all design tokens (Light + Dark columns)
 ```

@@ -179,6 +179,8 @@ Before marking any task as complete:
 3. Source map is up to date
 4. Design docs reference the new code
 5. `dart doc` / `javadoc` / equivalent compiles without warnings
+6. **Quality gates pass** — every test type defined in the implementation spec's Testing & Validation section has been run and passes (see `specs/general/quality-gates/spec.md`)
+7. **Coverage threshold met** — if the spec defines a coverage minimum, it is satisfied
 
 ---
 
@@ -239,14 +241,19 @@ When writing or modifying code, you MUST:
    - Update `design/source-map.md` with entries for all new files.
    - Add a note: `> **Auto-generated**: review for accuracy.`
 
-6. **Run validation** before completing any task:
+6. **Include a Testing & Validation section** in every new implementation spec.
+   - Copy the template from `specs/general/quality-gates/spec.md` §3
+   - Fill in the table with actual tools and commands for the target language/framework
+
+7. **Run validation & quality gates** before completing any task:
    - Run the language's doc validator (checkstyle, dart doc, etc.)
    - Fix all doc warnings/errors
+   - Run every command listed in the spec's Testing & Validation section
    - Verify the source map is current
    - Confirm every new file is mapped to a design doc (either existing or newly created)
 
-7. **Never require a prompt** for any of the above.
-   This is automatic, just like writing compilable code. If you generate code, you also generate the corresponding design doc and source map entries.
+8. **Never require a prompt** for any of the above.
+   This is automatic, just like writing compilable code. If you generate code, you also generate the corresponding tests, design doc, source map entries, and pass all defined quality gates.
 ```
 
 ### Project Setup Checklist

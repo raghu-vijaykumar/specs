@@ -41,3 +41,6 @@ Specs describe what the user sees and how it behaves, not which framework API to
 - Every component must specify behavior in all three modes (system, light, dark).
 - Every component must define entrance animation and press feedback.
 - New tokens: if a raw value appears in 3+ components, promote it to `tokens.md`.
+
+### 8. Quality-Gated [NEW]
+Every implementation spec must include a **Testing & Validation** section defining how its code will be tested and what commands verify correctness. Without passing quality gates, a spec is marked **in progress**, not final. See `specs/general/quality-gates/spec.md`.
