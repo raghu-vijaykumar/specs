@@ -19,6 +19,7 @@ specs/
 │   ├── feedback/          — Snackbar, spinner, skeleton, empty/error state, badge, progress
 │   ├── icons/             — 18 custom icon designs (all draft)
 │   ├── inputs/            — Text field, search, toggle, segmented control, slider, checkbox, radio
+│   ├── localization/      — i18n: string extraction, locale fallback, RTL, dynamic sizing, pseudo-locale testing
 │   ├── lists/             — Simple, grouped, swipeable, avatar, chip, divider
 │   ├── media/             — Image viewer, gallery grid, video player
 │   ├── navigation/        — Bottom nav, top tabs, floating indicator/icons
