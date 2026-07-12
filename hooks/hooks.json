@@ -9,6 +9,16 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "SCRIPT=\"${CLAUDE_PLUGIN_ROOT}/hooks/commit-quality-gate.ps1\"; [ -f \"$SCRIPT\" ] || SCRIPT=\"${CLAUDE_PROJECT_DIR}/.claude/hooks/commit-quality-gate.ps1\"; [ -f \"$SCRIPT\" ]&& powershell -ExecutionPolicy Bypass -File \"$SCRIPT\" || true"
+          }
+        ]
+      }
     ]
   }
 }
