@@ -23,6 +23,14 @@ Create `.github/copilot-instructions.md` with project-level guidance such as:
 - If you want Copilot to follow a specific skill process, instruct it explicitly, e.g.:
   - "Use the `context-engineering` skill guidance in `skills/context-engineering/SKILL.md` to answer this question."
 
+## Personal Copilot Skills
+
+You can also install these skills personally so they are available across all your local repositories.
+
+- Personal skills live in `~/.copilot/skills/` or `~/.agents/skills/`.
+- Copy `skills/<name>/` from this repo into your personal skill directory to make it available globally.
+- For detailed setup, see `docs/copilot-personal-setup.md`.
+
 ## Notes
 
 - There is no `codex plugin marketplace add` equivalent for GitHub Copilot.
