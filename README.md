@@ -15,6 +15,7 @@ npx skills add <your-repo-url>
 
 | Agent | Command / Setup | Docs |
 |-------|-----------------|------|
+| **Antigravity** | Root `plugin.json` manifest with `skills/` support | [`docs/antigravity-setup.md`](docs/antigravity-setup.md) |
 | **Claude Code** | `/plugin marketplace add <repo-url>` | [`docs/claude-setup.md`](docs/claude-setup.md) |
 | **OpenAI Codex** | `codex plugin marketplace add <repo-url>` | [`docs/codex-setup.md`](docs/codex-setup.md) |
 | **OpenCode** | Clone repo + `AGENTS.md` auto-discovery | [`docs/opencode-setup.md`](docs/opencode-setup.md) |
