@@ -28,8 +28,40 @@ Create `.github/copilot-instructions.md` with project-level guidance such as:
 You can also install these skills personally so they are available across all your local repositories.
 
 - Personal skills live in `~/.copilot/skills/` or `~/.agents/skills/`.
-- Copy `skills/<name>/` from this repo into your personal skill directory to make it available globally.
-- For detailed setup, see `docs/copilot-personal-setup.md`.
+- Each skill must be a directory containing a `SKILL.md` file.
+- The `~/.agents/skills/` path is also the standard home-directory skill location for Antigravity and other `.agents`-compatible tools.
+
+### Install all repo skills personally
+
+To make the skills available across all your local repos, copy the repo's `skills/` directories into your personal skill folder.
+
+```powershell
+cd /workspace/code/specs
+python -c "from pathlib import Path; import shutil; repo=Path('skills'); personal=Path.home()/'.copilot'/'skills'; personal.mkdir(parents=True, exist_ok=True);
+for src in sorted(repo.iterdir()):
+    if src.is_dir():
+        dst = personal / src.name
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(src, dst)
+print('Installed', sum(1 for _ in personal.iterdir()), 'skills to', personal)"
+```
+
+If you want Antigravity or `.agents`-based tools to consume the same skills, install them under `~/.agents/skills/` instead.
+
+### Verify personal installation
+
+```powershell
+Get-ChildItem $HOME\.copilot\skills -Directory | Select-Object -ExpandProperty Name
+```
+
+or for Antigravity-compatible tools:
+
+```powershell
+Get-ChildItem $HOME\.agents\skills -Directory | Select-Object -ExpandProperty Name
+```
+
+If you want to install only one skill instead of all skills, copy its folder only.
 
 ## Notes
 
