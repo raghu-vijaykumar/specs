@@ -160,6 +160,8 @@ Architecture, doc-sync, legal, quality-gates, security, PII handling, API design
 ├── hooks/                 # Session lifecycle hooks
 ├── docs/                  # Setup guides per agent
 ├── .codex-plugin/         # Codex plugin manifest
+├── opencode.json          # OpenCode project config (MCP servers)
+├── .codex/                # Codex project config (MCP servers)
 ├── AGENTS.md              # OpenCode agent instructions
 ├── CLAUDE.md              # Claude Code project instructions
 └── plugin.json            # Antigravity plugin manifest
@@ -171,3 +173,15 @@ Architecture, doc-sync, legal, quality-gates, security, PII handling, API design
 2. Adapt `tokens.md` to your brand colors, spacing, and radii
 3. Delete unused component specs
 4. Use the included skills via your preferred AI agent
+
+## MCP Servers
+
+This project includes pre-configured MCP servers for both [OpenCode](opencode.json) and [Codex](.codex/config.toml):
+
+| Server | Type | Purpose | Auth |
+|--------|------|---------|------|
+| **GitHub** | Remote | Issues, PRs, code search | OAuth |
+| **Filesystem** | Local (npx) | Read/write workspace files | None |
+| **Brave Search** | Local (npx) | Web search | `BRAVE_API_KEY` env var |
+
+See [`docs/mcp-setup.md`](docs/mcp-setup.md) for setup instructions.

@@ -1,0 +1,19 @@
+[mcp_servers.github]
+url = "https://api.github.com/mcp"
+auth = "oauth"
+required = false
+enabled = true
+
+[mcp_servers.filesystem]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "C:\\workspace", "C:\\Users\\Raghu"]
+required = false
+enabled = true
+
+[mcp_servers.brave-search]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-brave-search"]
+required = false
+enabled = true
+[mcp_servers.brave-search.env]
+BRAVE_API_KEY = ""

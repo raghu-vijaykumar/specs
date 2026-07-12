@@ -71,6 +71,13 @@ Quick-reference material in `references/`:
 
 Full component and architecture specs are in `specs/`.
 
+## MCP Servers
+
+This project configures three MCP servers for agent use:
+- `github` — Issues, PRs, code search, repository management (OAuth)
+- `filesystem` — Read/write access to workspace and home directories (local)
+- `brave-search` — Web and local search (requires `BRAVE_API_KEY` env var)
+
 ## Rules
 
 - Always check if a relevant skill exists before implementing

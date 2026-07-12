@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "github": {
+      "type": "remote",
+      "url": "https://api.github.com/mcp",
+      "oauth": true
+    },
+    "filesystem": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\workspace",
+        "C:\\Users\\Raghu"
+      ]
+    },
+    "brave-search": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-brave-search"],
+      "environment": {
+        "BRAVE_API_KEY": ""
+      }
+    }
+  }
+}
