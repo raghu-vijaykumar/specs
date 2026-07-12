@@ -19,7 +19,7 @@ npx skills add <your-repo-url>
 | **OpenAI Codex** | `codex plugin marketplace add <repo-url>` | [`docs/codex-setup.md`](docs/codex-setup.md) |
 | **OpenCode** | Clone repo + `AGENTS.md` auto-discovery | [`docs/opencode-setup.md`](docs/opencode-setup.md) |
 
-## All 29 Skills
+## All 30 Skills
 
 ### Define — Clarify what to build
 | Skill | Description |
@@ -44,6 +44,7 @@ npx skills add <your-repo-url>
 | [`frontend-ui-engineering`](skills/frontend-ui-engineering/SKILL.md) | Component architecture, design systems, state management, WCAG 2.1 AA |
 | [`api-and-interface-design`](skills/api-and-interface-design/SKILL.md) | Contract-first design, error semantics, boundary validation |
 | [`code-design`](skills/code-design/SKILL.md) | Design deep, modular architecture; small interfaces, focused implementations, clean seams |
+| [`improve-codebase-architecture`](skills/improve-codebase-architecture/SKILL.md) | Scan for architectural friction, surface deepening opportunities, and report them before drilling into one candidate |
 
 ### Verify — Prove it works
 | Skill | Description |
@@ -150,7 +151,7 @@ Architecture, doc-sync, legal, quality-gates, security, PII handling, API design
 
 ```
 .
-├── skills/                # 29 AI agent skills
+├── skills/                # 30 AI agent skills
 │   ├── spec-driven-development/
 │   ├── incremental-implementation/
 │   ├── test-driven-development/

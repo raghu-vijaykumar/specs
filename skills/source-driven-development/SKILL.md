@@ -24,10 +24,27 @@ Every framework-specific code decision must be backed by official documentation.
 - Pure logic that works the same across all versions (loops, conditionals, data structures)
 - The user explicitly wants speed over verification ("just do it quickly")
 
+## OpenSrc Pairing
+
+This skill should work in tandem with the OpenSrc workflow whenever the question is not just "what is the public API?" but also "how does this library behave internally?"
+
+Use OpenSrc when:
+
+- The public docs are high-level but the implementation details matter
+- You need to verify how a library handles edge cases, errors, or version-specific behavior
+- You want to inspect the actual source of a dependency before relying on it
+- A framework or package seems to have surprising runtime behavior that is not obvious from the docs
+
+In those cases:
+
+1. Use the official docs to establish the intended API and version.
+2. Use OpenSrc to inspect the package source and verify the actual implementation path.
+3. Cite both the docs and the source when the behavior matters.
+
 ## The Process
 
 ```
-DETECT ──→ FETCH ──→ IMPLEMENT ──→ CITE
+DETECT ──→ FETCH ──→ VERIFY ──→ IMPLEMENT ──→ CITE
   │          │           │            │
   ▼          ▼           ▼            ▼
  What       Get the    Follow the   Show your
@@ -64,6 +81,13 @@ If versions are missing or ambiguous, **ask the user**. Don't guess — the vers
 
 Fetch the specific documentation page for the feature you're implementing. Not the homepage, not the full docs — the relevant page.
 
+If the docs are insufficient, switch to OpenSrc for the package implementation:
+
+- Use the OpenSrc MCP/server workflow to resolve the dependency source path
+- Inspect the relevant module or function implementation directly
+- Compare the actual implementation to the documented contract
+- Call out any mismatch clearly to the user
+
 **Source hierarchy (in order of authority):**
 
 | Priority | Source | Example |
@@ -96,7 +120,7 @@ When official sources conflict with each other (e.g. a migration guide contradic
 
 ### Step 3: Implement Following Documented Patterns
 
-Write code that matches what the documentation shows:
+Write code that matches what the documentation shows, and use OpenSrc evidence when the docs leave ambiguity or when the implementation details are critical:
 
 - Use the API signatures from the docs, not from memory
 - If the docs show a new way to do something, use the new way
@@ -191,4 +215,5 @@ After implementing with source-driven development:
 - [ ] Non-trivial decisions include source citations with full URLs
 - [ ] No deprecated APIs are used (checked against migration guides)
 - [ ] Conflicts between docs and existing code were surfaced to the user
+- [ ] OpenSrc was used when implementation details were needed beyond the public docs
 - [ ] Anything that could not be verified is explicitly flagged as unverified

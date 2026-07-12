@@ -19,6 +19,18 @@ Write a structured specification before writing any code. The spec is the shared
 
 **When NOT to use:** Single-line fixes, typo corrections, or changes where requirements are unambiguous and self-contained.
 
+## SpecKit + Agent-Skills Workflow
+
+This skill works especially well with GitHub SpecKit. Treat SpecKit as the spec authoring and task-planning layer, and treat this repo's agent skills as the review and execution layer.
+
+Use the flow like this:
+
+1. Use SpecKit to draft or refine the feature spec and task list.
+2. Use this skill to turn that spec into a living repository artifact with clear objectives, boundaries, and success criteria.
+3. Before implementation, use the architecture skill to identify structural friction in the touched area.
+4. Before each commit, run the code-review skill over the diff and resolve any P0/P1 issues before proceeding.
+5. Keep the spec updated as decisions evolve so the repo stays aligned with the implementation.
+
 ## The Gated Workflow
 
 Spec-driven development has four phases. Do not advance to the next phase until the current one is validated.
@@ -204,3 +216,14 @@ Before proceeding to implementation, confirm:
 - [ ] Success criteria are specific and testable
 - [ ] Boundaries (Always/Ask First/Never) are defined
 - [ ] The spec is saved to a file in the repository
+- [ ] An architecture review was considered for the touched area using `improve-codebase-architecture`
+- [ ] A code review pass was completed using `code-review-and-quality` or `code-review` before the commit is finalized
+
+## Commit Gate
+
+Every commit should carry the same discipline:
+
+- If the scope changed, update the spec first.
+- If the change touches architecture-sensitive code, run the architecture-review skill before finishing.
+- If the change alters behavior, run a code review pass before merging.
+- Keep the spec, implementation, and review artifacts aligned so future work is easier.
