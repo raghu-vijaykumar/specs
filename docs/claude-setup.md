@@ -16,6 +16,8 @@ If SSH keys aren't set up, use HTTPS:
 /plugin install specs@<your-plugin-name>
 ```
 
+Because this repository includes `.claude-plugin/plugin.json`, Claude Code can install it as a plugin from your repo and make the skills available across workspaces that use the same Claude environment.
+
 ### Local install
 ```bash
 git clone <your-repo-url>

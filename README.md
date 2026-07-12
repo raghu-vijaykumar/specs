@@ -164,6 +164,7 @@ Architecture, doc-sync, legal, quality-gates, security, PII handling, API design
 ├── hooks/                 # Session lifecycle hooks
 ├── docs/                  # Setup guides per agent
 ├── .codex-plugin/         # Codex plugin manifest
+├── .claude-plugin/        # Claude plugin manifest
 ├── opencode.json          # OpenCode project config (MCP servers)
 ├── .codex/                # Codex project config (MCP servers)
 ├── AGENTS.md              # OpenCode agent instructions

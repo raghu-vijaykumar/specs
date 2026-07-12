@@ -1,0 +1,14 @@
+{
+  "name": "specs",
+  "version": "1.0.0",
+  "description": "Framework-agnostic design and architecture specs — reusable as a starting point for any project.",
+  "skills": "./skills/",
+  "hooks": {
+    "hooks": {}
+  },
+  "interface": {
+    "displayName": "App Specs",
+    "shortDescription": "Design & architecture specs: 29 skills, 4 agent personas, 12 reference checklists.",
+    "category": "Productivity"
+  }
+}
