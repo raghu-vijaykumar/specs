@@ -1,0 +1,21 @@
+{
+  "name": "specs",
+  "interface": {
+    "displayName": "App Specs"
+  },
+  "plugins": [
+    {
+      "name": "specs",
+      "description": "Framework-agnostic design and architecture specs — reusable as a starting point for any project. Includes 27 agent skills, 4 agent personas, and 12 reference checklists.",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
