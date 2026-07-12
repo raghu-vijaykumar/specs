@@ -77,6 +77,8 @@ Create a rules file that persists across sessions. This is the highest-leverage 
 - `.github/copilot-instructions.md` (GitHub Copilot)
 - `AGENTS.md` (OpenAI Codex)
 
+> For GitHub Copilot, create `.github/copilot-instructions.md` with project rules, conventions, and boundaries. Mirror the top-level guidance in `CLAUDE.md` and keep the file concise.
+
 ### Level 2: Specs and Architecture
 
 Load the relevant spec section when starting a feature. Don't load the entire spec if only one section applies.
