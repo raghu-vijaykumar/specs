@@ -24,6 +24,11 @@ For any non-trivial task, the default skill chain should be:
 
 This should be embedded in new specs so downstream agents can follow it without repeated manual prompting.
 
+## New Skill Addition
+- Add new skills by phase, not by explicit user request.
+- Register the skill in this workflow doc and in `skills/using-agent-skills/SKILL.md` so it can be auto-selected by task type.
+- If a new skill is domain-specific, also document its usage in the corresponding phase section of `specs/AGENTS.md`.
+
 ## opensrc — Source Code Fetching
 
 **Prerequisite:** `npm install -g opensrc`

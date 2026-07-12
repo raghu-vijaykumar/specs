@@ -27,6 +27,7 @@ This repository contains framework-agnostic design and architecture specs, plus 
 - For any behavioral change, bug fix, or logic work, automatically include `test-driven-development`.
 - For UI or browser-facing work, include `browser-testing-with-devtools`.
 - Before merge or handoff, run `code-review-and-quality` and add specialist review skills only when the task domain requires them.
+- New skills should be added by phase and documented in the canonical workflow, so downstream agents can auto-select them without explicit prompting.
 
 ## opensrc
 

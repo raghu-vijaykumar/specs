@@ -35,6 +35,12 @@
 - Before merge or handoff, run `code-review-and-quality` and add specialist review skills only when the task domain requires them.
 - Add `security-and-hardening`, `performance-optimization`, `git-workflow-and-versioning`, and `documentation-and-adrs` at the appropriate stage rather than as a generic catch-all.
 
+## How Skills Are Selected
+- Treat this policy as the canonical routing logic for downstream agents.
+- The agent should auto-select the next skill by task phase, not by waiting for the user to name it.
+- Use `skills/using-agent-skills/SKILL.md` as the meta-skill for discovery and phase mapping.
+- When adding a new skill, update this policy and the canonical phase map in `specs/AGENTS.md`, `specs/CLAUDE.md`, `docs/global-AGENTS.md`, and `skills/using-agent-skills/SKILL.md`.
+
 ## Default Skill Chain
 1. `interview-me` / `idea-refine` when the request is unclear.
 2. `spec-driven-development` for the initial spec.

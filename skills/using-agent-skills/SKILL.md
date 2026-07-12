@@ -41,6 +41,14 @@ Task arrives
     └── Deploying/launching? ─────────→ shipping-and-launch
 ```
 
+## How Skills Are Invoked
+
+This meta-skill is the canonical discovery layer. Downstream agents should use it to select the next skill based on the task phase, not by waiting for the user to name a skill explicitly.
+
+- The agent should auto-pick the next skill from the phase map whenever the task is clear enough to determine a phase.
+- When a task remains ambiguous, prefer `interview-me` or `idea-refine` first.
+- New skills should be added to the phase map and workflow docs so they can be auto-selected in future tasks.
+
 ## Core Operating Behaviors
 
 These behaviors apply at all times, across all skills. They are non-negotiable.
