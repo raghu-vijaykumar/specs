@@ -60,7 +60,7 @@ ASSUMPTIONS I'M MAKING:
 
 Don't silently fill in ambiguous requirements. The spec's entire purpose is to surface misunderstandings *before* code gets written — assumptions are the most dangerous form of misunderstanding.
 
-**Write a spec document covering these six core areas:**
+**Write a spec document covering these seven core areas:**
 
 1. **Objective** — What are we building and why? Who is the user? What does success look like?
 
@@ -91,6 +91,15 @@ Don't silently fill in ambiguous requirements. The spec's entire purpose is to s
    - **Ask first:** Database schema changes, adding dependencies, changing CI config
    - **Never do:** Commit secrets, edit vendor directories, remove failing tests without approval
 
+7. **Agent Workflow / Auto-Injection** — Explicitly state the default skill chain for downstream agents so they do not need repeated manual prompting. Include the default sequence for spec-driven work:
+   - If the request is vague or underspecified, start with `interview-me` and `idea-refine`.
+   - If the task is non-trivial and no spec exists, start with `spec-driven-development`.
+   - Once a spec exists or is updated, move to `planning-and-task-breakdown`.
+   - Once planning is available, use `context-engineering` and `incremental-implementation`.
+   - For behavior changes, bugs, or logic work, include `test-driven-development`.
+   - For UI or browser-facing work, include `browser-testing-with-devtools`.
+   - Before merge or handoff, include `code-review-and-quality` and add specialist review skills only when the task domain requires them.
+
 **Spec template:**
 
 ```markdown
@@ -118,6 +127,12 @@ Don't silently fill in ambiguous requirements. The spec's entire purpose is to s
 - Always: [...]
 - Ask first: [...]
 - Never: [...]
+
+## Agent Workflow / Auto-Injection
+- Default entry: `interview-me` / `idea-refine` if the request is unclear.
+- Default execution chain: `spec-driven-development` → `planning-and-task-breakdown` → `context-engineering` → `incremental-implementation` → `test-driven-development` → `code-review-and-quality`.
+- Add `browser-testing-with-devtools` for UI/browser work and `debugging-and-error-recovery` if implementation fails.
+- Add `security-and-hardening`, `performance-optimization`, `git-workflow-and-versioning`, and `documentation-and-adrs` when the task domain requires them.
 
 ## Success Criteria
 [How we'll know this is done — specific, testable conditions]

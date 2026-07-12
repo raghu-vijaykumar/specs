@@ -10,6 +10,20 @@ Copy this file to your global agent config directory:
 
 ---
 
+## Default Workflow for Spec-Driven Development
+
+For any non-trivial task, the default skill chain should be:
+
+1. `interview-me` / `idea-refine` when the request is unclear.
+2. `spec-driven-development` for the initial spec.
+3. `planning-and-task-breakdown` for task decomposition.
+4. `context-engineering` and `incremental-implementation` for execution.
+5. `test-driven-development` for behavior changes and bug fixes.
+6. `browser-testing-with-devtools` for UI verification when relevant.
+7. `code-review-and-quality` before merge or handoff.
+
+This should be embedded in new specs so downstream agents can follow it without repeated manual prompting.
+
 ## opensrc — Source Code Fetching
 
 **Prerequisite:** `npm install -g opensrc`

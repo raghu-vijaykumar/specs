@@ -19,6 +19,15 @@ This repository contains framework-agnostic design and architecture specs, plus 
 - `security-auditor` — Vulnerability detection
 - `web-performance-auditor` — Core Web Vitals audit
 
+## Default Workflow for Spec-Driven Development
+- For any non-trivial task, start with `spec-driven-development` unless the request is still unclear.
+- If the request is vague or underspecified, first use `interview-me` and `idea-refine`.
+- Once a spec exists or is updated, automatically move to `planning-and-task-breakdown`.
+- Once planning is available, automatically use `context-engineering` and `incremental-implementation`.
+- For any behavioral change, bug fix, or logic work, automatically include `test-driven-development`.
+- For UI or browser-facing work, include `browser-testing-with-devtools`.
+- Before merge or handoff, run `code-review-and-quality` and add specialist review skills only when the task domain requires them.
+
 ## opensrc
 
 Fetch dependency source code for deeper implementation context. Requires `npm install -g opensrc`.

@@ -23,3 +23,23 @@
 - For process questions, reference the relevant skill doc.
 - For installation or setup questions, explain that Copilot uses `.github/copilot-instructions.md` rather than a plugin install command.
 - Keep recommendations aligned with the existing `README.md` and `docs/` guides.
+
+## Auto-Injection Policy for Spec-Driven Development
+- Treat `spec-driven-development` as the default entry skill for any non-trivial task that has unclear or evolving requirements.
+- If the request is vague or underspecified, first use `interview-me` and `idea-refine`.
+- Once a spec exists or is updated, automatically move to `planning-and-task-breakdown`.
+- Once planning is available, automatically use `context-engineering` and `incremental-implementation`.
+- For any behavior change, bug fix, or logic work, automatically include `test-driven-development`.
+- For UI or browser-facing work, include `browser-testing-with-devtools`.
+- If implementation fails or behavior is unexpected, use `debugging-and-error-recovery`.
+- Before merge or handoff, run `code-review-and-quality` and add specialist review skills only when the task domain requires them.
+- Add `security-and-hardening`, `performance-optimization`, `git-workflow-and-versioning`, and `documentation-and-adrs` at the appropriate stage rather than as a generic catch-all.
+
+## Default Skill Chain
+1. `interview-me` / `idea-refine` when the request is unclear.
+2. `spec-driven-development` for the initial spec.
+3. `planning-and-task-breakdown` for task decomposition.
+4. `context-engineering` and `incremental-implementation` for execution.
+5. `test-driven-development` for behavior changes and bug fixes.
+6. `browser-testing-with-devtools` for UI verification when relevant.
+7. `code-review-and-quality` before merge or handoff.
