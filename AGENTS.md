@@ -20,6 +20,7 @@ This repository provides design and architecture specs that skills and agents ca
 - `doubt-driven-development` — Adversarial fresh-context review of non-trivial decisions
 - `frontend-ui-engineering` — Component architecture, design systems, state management, WCAG 2.1 AA
 - `api-and-interface-design` — Contract-first design, error semantics, boundary validation
+- `code-design` — Design deep, modular architecture; small interfaces with focused implementations at clean seams
 
 ### Verify
 - `browser-testing-with-devtools` — Chrome DevTools MCP for live runtime data
@@ -30,6 +31,7 @@ This repository provides design and architecture specs that skills and agents ca
 - `code-simplification` — Chesterton's Fence, Rule of 500, complexity reduction
 - `security-and-hardening` — OWASP Top 10 prevention, auth patterns, dependency auditing
 - `performance-optimization` — Measure-first approach, Core Web Vitals, profiling
+- `codebase-review` — Audit existing codebases for modular design violations (oversized modules, duplication, layer mixing) and drive fixes
 
 ### Ship
 - `git-workflow-and-versioning` — Trunk-based development, atomic commits

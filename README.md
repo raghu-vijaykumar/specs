@@ -19,7 +19,7 @@ npx skills add <your-repo-url>
 | **OpenAI Codex** | `codex plugin marketplace add <repo-url>` | [`docs/codex-setup.md`](docs/codex-setup.md) |
 | **OpenCode** | Clone repo + `AGENTS.md` auto-discovery | [`docs/opencode-setup.md`](docs/opencode-setup.md) |
 
-## All 27 Skills
+## All 29 Skills
 
 ### Define — Clarify what to build
 | Skill | Description |
@@ -43,6 +43,7 @@ npx skills add <your-repo-url>
 | [`doubt-driven-development`](skills/doubt-driven-development/SKILL.md) | Adversarial fresh-context review of non-trivial decisions |
 | [`frontend-ui-engineering`](skills/frontend-ui-engineering/SKILL.md) | Component architecture, design systems, state management, WCAG 2.1 AA |
 | [`api-and-interface-design`](skills/api-and-interface-design/SKILL.md) | Contract-first design, error semantics, boundary validation |
+| [`code-design`](skills/code-design/SKILL.md) | Design deep, modular architecture; small interfaces, focused implementations, clean seams |
 
 ### Verify — Prove it works
 | Skill | Description |
@@ -57,6 +58,7 @@ npx skills add <your-repo-url>
 | [`code-simplification`](skills/code-simplification/SKILL.md) | Chesterton's Fence, Rule of 500, complexity reduction |
 | [`security-and-hardening`](skills/security-and-hardening/SKILL.md) | OWASP Top 10 prevention, auth patterns, dependency auditing |
 | [`performance-optimization`](skills/performance-optimization/SKILL.md) | Measure-first approach, Core Web Vitals, profiling |
+| [`codebase-review`](skills/codebase-review/SKILL.md) | Audit existing codebases for modular design violations (oversized modules, duplication, layer mixing) and drive fixes |
 
 ### Ship — Deploy with confidence
 | Skill | Description |
@@ -148,7 +150,7 @@ Architecture, doc-sync, legal, quality-gates, security, PII handling, API design
 
 ```
 .
-├── skills/                # 27 AI agent skills
+├── skills/                # 29 AI agent skills
 │   ├── spec-driven-development/
 │   ├── incremental-implementation/
 │   ├── test-driven-development/
