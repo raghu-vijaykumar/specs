@@ -43,6 +43,7 @@ This repository provides design and architecture specs that skills and agents ca
 - `code-review` (custom) — Multi-aspect code review with 8 parallel subagents (style, security, performance, error handling, testing quality, architecture, documentation, accessibility)
 - `draw-io` (custom) — Diagram creation: layout, colors, connectors, 7 template types, validation
 - `manim` (custom) — Animation creation: 7 scene templates, pacing, styling, validation
+- `opensrc` — Fetch dependency source code to give AI agents deeper implementation context (requires `npm install -g opensrc`)
 
 ### Meta
 - `using-agent-skills` — Maps incoming work to the right skill workflow, defines shared operating rules
@@ -73,10 +74,11 @@ Full component and architecture specs are in `specs/`.
 
 ## MCP Servers
 
-This project configures three MCP servers for agent use:
+This project configures MCP servers for agent use:
 - `github` — Issues, PRs, code search, repository management (OAuth)
 - `filesystem` — Read/write access to workspace and home directories (local)
 - `brave-search` — Web and local search (requires `BRAVE_API_KEY` env var)
+- `opensrc` — Fetch dependency source code path; use with Read tool to inspect library internals
 
 ## Rules
 
@@ -84,3 +86,4 @@ This project configures three MCP servers for agent use:
 - If a skill applies, use it
 - Reference specs for design decisions and component patterns
 - Never skip verification gates defined in `references/quality-gates.md`
+- When you need to understand how a library works internally, use `opensrc` skill or MCP tool to fetch and read its source code

@@ -74,6 +74,7 @@ npx skills add <your-repo-url>
 | [`code-review`](skills/code-review/SKILL.md) | Multi-aspect code review with 8 parallel subagents |
 | [`draw-io`](skills/draw-io/SKILL.md) | Diagram creation: layout, colors, connectors, 7 template types, validation |
 | [`manim`](skills/manim/SKILL.md) | Animation creation: 7 scene templates, pacing, styling, validation |
+| [`opensrc`](skills/opensrc/SKILL.md) | Fetch dependency source code for deeper implementation context |
 
 ### Meta
 | Skill | Description |
@@ -183,5 +184,6 @@ This project includes pre-configured MCP servers for both [OpenCode](opencode.js
 | **GitHub** | Remote | Issues, PRs, code search | OAuth |
 | **Filesystem** | Local (npx) | Read/write workspace files | None |
 | **Brave Search** | Local (npx) | Web search | `BRAVE_API_KEY` env var |
+| **opensrc** | Local (MCP) | Fetch dependency source code | `npm install -g opensrc` |
 
-See [`docs/mcp-setup.md`](docs/mcp-setup.md) for setup instructions.
+See [`docs/mcp-setup.md`](docs/mcp-setup.md) and [`docs/opensrc-setup.md`](docs/opensrc-setup.md) for setup instructions.

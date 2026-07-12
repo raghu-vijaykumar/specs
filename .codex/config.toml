@@ -17,3 +17,10 @@ required = false
 enabled = true
 [mcp_servers.brave-search.env]
 BRAVE_API_KEY = ""
+
+[mcp_servers.opensrc]
+command = "node"
+args = ["scripts/opensrc-mcp-server.mjs"]
+cwd = "."
+required = false
+enabled = true

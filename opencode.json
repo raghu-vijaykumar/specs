@@ -22,6 +22,11 @@
       "environment": {
         "BRAVE_API_KEY": ""
       }
+    },
+    "opensrc": {
+      "type": "local",
+      "command": ["node", "scripts/opensrc-mcp-server.mjs"],
+      "cwd": "."
     }
   }
 }

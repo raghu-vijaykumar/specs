@@ -10,7 +10,7 @@ This repository contains framework-agnostic design and architecture specs, plus 
 **Verify:** browser-testing-with-devtools, debugging-and-error-recovery
 **Review:** code-review-and-quality, code-simplification, security-and-hardening, performance-optimization
 **Ship:** git-workflow-and-versioning, ci-cd-and-automation, deprecation-and-migration, documentation-and-adrs, observability-and-instrumentation, shipping-and-launch
-**Custom:** code-review (8-axis review), draw-io (diagrams), manim (animations)
+**Custom:** code-review (8-axis review), draw-io (diagrams), manim (animations), opensrc (source code fetching)
 **Meta:** using-agent-skills
 
 ## Agent Personas
@@ -18,6 +18,16 @@ This repository contains framework-agnostic design and architecture specs, plus 
 - `test-engineer` — Test strategy and coverage
 - `security-auditor` — Vulnerability detection
 - `web-performance-auditor` — Core Web Vitals audit
+
+## opensrc
+
+Fetch dependency source code for deeper implementation context. Requires `npm install -g opensrc`.
+
+```bash
+opensrc path zod                     # get path to zod source
+cat $(opensrc path zod)/src/types.ts # read a specific file
+rg "parse" $(opensrc path zod)       # search within source
+```
 
 ## References
 - `references/constitution.md` — Design principles
