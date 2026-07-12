@@ -31,6 +31,7 @@ All skills live in `skills/<name>/SKILL.md`. The agent reads `AGENTS.md` to unde
 - `code-review` — Multi-aspect code review with 8 parallel subagents
 - `draw-io` — Diagram creation with 7 template types
 - `manim` — Animation creation with 7 scene templates
+- `improve-codebase-architecture` — Architecture review that surfaces deepening opportunities as an HTML report
 
 ### References
 The `references/` folder contains quick-reference material:

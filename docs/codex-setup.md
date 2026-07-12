@@ -42,6 +42,7 @@ After install, invoke a skill in Codex chat with `@`:
 - `@doubt-driven-development` — Adversarial review
 - `@frontend-ui-engineering` — Component architecture, WCAG
 - `@api-and-interface-design` — Contract-first design
+- `@improve-codebase-architecture` — Surface deepening opportunities and present an HTML review
 
 ### Verify
 - `@browser-testing-with-devtools` — Live runtime data

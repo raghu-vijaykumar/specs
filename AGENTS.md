@@ -21,6 +21,7 @@ This repository provides design and architecture specs that skills and agents ca
 - `frontend-ui-engineering` — Component architecture, design systems, state management, WCAG 2.1 AA
 - `api-and-interface-design` — Contract-first design, error semantics, boundary validation
 - `code-design` — Design deep, modular architecture; small interfaces with focused implementations at clean seams
+- `improve-codebase-architecture` — Scan for architectural friction, surface deepening opportunities, and present them as an HTML report
 
 ### Verify
 - `browser-testing-with-devtools` — Chrome DevTools MCP for live runtime data
